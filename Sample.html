@@ -1,0 +1,166 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <script src="Scripts/Sample.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+            /* Add a background color when the inputs get focus */
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+            button:hover {
+                opacity: 1;
+            }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: #474e5d;
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #f44336;
+                cursor: pointer;
+            }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 30px) {
+            .signupbtn, .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="modal-content" action="email.html">
+        <div class="container">
+            <h1> BODY MASS INDEX </h1>
+
+
+            <label for="name"><b>WEIGHT</b></label>
+            <input type="text" placeholder="Enter Weight" id="num1" required>
+            <select id="weight">
+                <option value="g">grams(g)</option>
+                <option value="kg">kilograms(Kg)</option>
+            </select>
+            <br>
+            <br>
+            <label for="email"><b>HEIGHT</b></label>
+            <input type="text" placeholder="Enter Height" id="num2" required>
+            <select id="height">
+                <option value="cm">centimeter(cm)</option>
+                <option value="m">meter(m)</option>
+            </select>
+            <br>
+            <br>
+            <div class="clearfix">
+                <button type="button" onclick="calculate()" class="signupbtn">BMI</button>
+                <a href="Login.html">
+                    <button type="button" class="cancelbtn">NOTIFICATION</button>
+                </a>
+            </div>
+
+            <label for="result"><b>RESULT</b></label>
+            <input type="text" placeholder="Your BMI" id="result">
+        </div>
+    </form>
+
+</body>
+
+
+</html>
